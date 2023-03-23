@@ -58,7 +58,9 @@ public class a3_listOfMapExample {
 
         Connection connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM employees");
+        ResultSet resultSet = statement.executeQuery("SELECT first_name,last_name,salary,job_id\n" +
+                "from employees\n" +
+                "where rownum <6");
 
 
         //in order to get column names we need resultsetmetadata
@@ -92,6 +94,9 @@ public class a3_listOfMapExample {
         System.out.println(row2.toString());
 
 
+        //adding rows one by one to my list
+        queryData.add(row1);
+        queryData.add(row2);
 
 
         //close connection
