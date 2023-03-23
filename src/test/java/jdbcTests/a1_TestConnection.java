@@ -2,7 +2,7 @@ package jdbcTests;
 
 import java.sql.*;
 
-public class TestConnection {
+public class a1_TestConnection {
 
     public static void main(String[] args) throws SQLException {
         String dbUrl = "jdbc:oracle:thin:@52.3.253.62:1521:XE"; // @52.3.253.62 part is our AWS Instance ip adress
